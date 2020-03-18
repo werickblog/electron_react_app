@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "impacted-font";
+  src: url("../fonts/Impacted.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "impact-font";
+  src: url("../fonts/impact.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "netflix-bold";
+  src: url("../fonts/netflix_bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "netflix-medium";
+  src: url("../fonts/netflix_medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "netflix-light";
+  src: url("../fonts/netflix_light.otf") format("opentype");
+}
+
+/* Define our color variables */
+
+html[data-theme="light"] {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+/* Redefine our color variables if the data-theme attr
+    value is "dark
+  */
+
+html {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$grey-color: #c4c4c4;
+$impacted-font: "impacted-font", sans-serif;
+$impact-font: "impact-font", sans-serif;
+$font-bold: "netflix-bold", sans-serif;
+$font-light: "netflix-light", sans-serif;
+$font-medium: "netflix-medium", sans-serif;

@@ -1,0 +1,14 @@
+.header__holder {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__section {
+    margin-top: 12%;
+    
+  .footer__text {
+    text-align: center;
+    font-family: $font-medium;
+    font-size: 18pt;
+  }
+}

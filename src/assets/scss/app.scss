@@ -1,0 +1,10 @@
+@import "./module";
+
+.App {
+    margin: 16px;
+}
+
+html, body {
+    background: $primary-color;
+    color: $secondary-color;
+}

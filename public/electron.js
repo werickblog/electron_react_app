@@ -9,7 +9,7 @@ let mainWindow;
 
 function createWindow() {
   // Define the applications dimension
-  mainWindow = new BrowserWindow({ width: 900, height: 680 });
+  mainWindow = new BrowserWindow({ width: 1440, height: 1080 });
   // Determine what to render based on environment
   mainWindow.loadURL(
     isDev
