@@ -4,6 +4,7 @@ import CanvasProperties from "../../components/Canvas/CanvasProperties";
 import ColorPickerProperties from "../../components/Canvas/ColorPickerProperties";
 import DesignComponent from "../../components/Canvas/Design";
 import FontProperties from "../../components/Canvas/FontProperties";
+import ImageProperties from "../../components/Canvas/ImageProperties";
 
 class ImageEditor extends React.Component {
   state = {
@@ -15,7 +16,7 @@ class ImageEditor extends React.Component {
       height: 700,
       overlay: null,
       exportExt: "png",
-      fontSize: 20
+      fontSize: 60
     }
   };
 
@@ -67,9 +68,18 @@ class ImageEditor extends React.Component {
     });
   };
 
+  changeBgUrl = e => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        bgUrl: e.target.value
+      }
+    });
+  };
+
   render() {
     const {
-      settings: { height, width, background, color, fontSize }
+      settings: { height, width, background, color, fontSize, bgUrl }
     } = this.state;
     return (
       <div>
@@ -90,6 +100,10 @@ class ImageEditor extends React.Component {
             <FontProperties
               changeFontSize={this.changeFontSize}
               fontSize={fontSize}
+            />
+            <ImageProperties
+              image={bgUrl}
+              handleImageUpdate={this.changeBgUrl}
             />
           </div>
         </SideNav>

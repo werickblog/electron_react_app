@@ -11,7 +11,7 @@ export const downloadImage = (node, width, height, type = "png") => {
   };
 
   const downloadFile = (dataUrl, ext) => {
-    let link = document.createElement("a");
+    let link = document.createElement("a");    
     link.download = `Wik-@get.luusy.${ext}`;
     link.href = "data:" + dataUrl;
     document.body.appendChild(link);

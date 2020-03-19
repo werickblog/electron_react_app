@@ -11,7 +11,7 @@ const ColorPickerProperties = ({
   fontColor
 }) => {
   return (
-    <Toggle initial={true}>
+    <Toggle initial={false}>
       {({ on, toggle }) => (
         <>
           <div className="toggle" onClick={toggle} checked={on}>

@@ -6,7 +6,7 @@ import LabelOption from "../commons/Label";
 
 const CanvasProperties = ({ height, width, changeWidth, changeHeight }) => {
   return (
-    <Toggle initial={true}>
+    <Toggle initial={false}>
       {({ on, toggle }) => (
         <>
           <div className="toggle" onClick={toggle} checked={on}>

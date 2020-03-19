@@ -1,8 +1,9 @@
 .sidenav {
   top: 0px;
   left: 0px;
-  width: 200px;
+  width: 300px;
   height: 100vh;
+  max-height: 100vh;
   position: fixed;
   border: 2px solid $secondary-color;
 
@@ -18,54 +19,67 @@
   }
 
   .sidenav__options {
+    overflow-y: scroll;
     .sidenav__items {
       margin-top: 20%;
       padding: 8px;
 
       .toggle {
-          cursor: pointer;
+        cursor: pointer;
 
-          div {
-              font-family: $font-bold;
-              font-size: 24px;
-          }
+        div {
+          font-family: $font-bold;
+          font-size: 24px;
+        }
       }
 
       .toggle__options {
-          background: $secondary-color;
-          .label__option-holder {
-              margin-top: 5px;
-              padding: 10px;
-              color: $primary-color;
+        background: $secondary-color;
+        .label__option-holder {
+          margin-top: 5px;
+          padding: 10px;
+          color: $primary-color;
 
-              .label__option-header {
-                  font-family: $font-bold;
-              }
-
-              .label__options {
-                  .small__input {
-                      width: 100%;
-                      padding: 15px;
-                      font-size: 24pt;
-                      color: $primary-color;
-                      background: $secondary-color;
-                      border: 2px solid $primary-color;
-                      font-family: $font-bold;
-                  }
-
-                  .input__right-text {
-                    font-size: 24px;
-                    font-family: $font-bold;
-                  }
-              }
+          .label__option-header {
+            font-family: $font-bold;
           }
+
+          .label__options {
+            .small__input {
+              width: 100%;
+              padding: 15px;
+              font-size: 24pt;
+              color: $primary-color;
+              background: $secondary-color;
+              border: 2px solid $primary-color;
+              font-family: $font-bold;
+            }
+
+            .text__input {
+              width: 100%;
+              padding: 10px;
+              font-size: 11pt;
+              color: $primary-color;
+              background: $secondary-color;
+              border: 2px solid $primary-color;
+              font-family: $font-bold;
+            }
+
+            .input__right-text {
+              font-size: 24px;
+              font-family: $font-bold;
+            }
+          }
+        }
       }
     }
   }
 }
 
 .side__content {
-  margin-left: 200px;
+  margin-left: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .color-picker {
@@ -85,7 +99,7 @@
 
 .toolbar {
   margin: 25px;
-  
+
   .download {
     border: 2px solid $secondary-color;
     background: transparent;
@@ -102,5 +116,12 @@
     svg {
       filter: invert(100%);
     }
+    display: none;
+  }
+}
+
+.movable__text:hover {
+  .handle {
+    display: block;
   }
 }

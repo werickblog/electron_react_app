@@ -6,7 +6,7 @@ import LabelOption from "../commons/Label";
 
 const FontProperties = ({ fontSize, changeFontSize }) => {
   return (
-    <Toggle initial={true}>
+    <Toggle initial={false}>
       {({ on, toggle }) => (
         <>
           <div className="toggle" onClick={toggle} checked={on}>

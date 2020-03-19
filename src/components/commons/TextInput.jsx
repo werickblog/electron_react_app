@@ -1,11 +1,11 @@
 import React from "react";
 
-const NumberInput = ({ name, defaultValue, handleChange, value = null }) => {
+const TextInput = ({ name, defaultValue, handleChange, value = null }) => {
   if (value === null)
     return (
       <input
-        type="number"
-        className="small__input"
+        type="text"
+        className="text__input"
         onChange={handleChange}
         name={name}
         defaultValue={defaultValue}
@@ -14,8 +14,8 @@ const NumberInput = ({ name, defaultValue, handleChange, value = null }) => {
 
   return (
     <input
-      className="small__input"
-      type="number"
+      className="text__input"
+      type="text"
       onChange={handleChange}
       name={name}
       value={value}
@@ -23,4 +23,4 @@ const NumberInput = ({ name, defaultValue, handleChange, value = null }) => {
   );
 };
 
-export default NumberInput;
+export default TextInput;
